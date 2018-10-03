@@ -13,8 +13,7 @@ export default {
     }
   },
   created: function () {
-    alert(this.URL_CONFIG.urlList().user.getUser)
-    const url = '/user/get'
+    const url = this.URL_CONFIG.urlList().user.getUser
     this.$http({
       method: 'post',
       url: url
@@ -22,7 +21,7 @@ export default {
       console.log(res.data.name)
       console.log(res.data.age)
     }).catch(function (error) {
-      alert(error)
+      console.log(error.toString())
     })
   }
 }
