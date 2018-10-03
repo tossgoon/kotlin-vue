@@ -13,6 +13,7 @@ export default {
     }
   },
   created: function () {
+    alert(this.URL_CONFIG.urlList().user.getUser)
     const url = '/user/get'
     this.$http({
       method: 'post',
