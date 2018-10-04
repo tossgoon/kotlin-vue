@@ -5,6 +5,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/Index'
 import Alert from '@/components/Alert'
 
+import Register from '@/components/user/Register'
+
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +23,10 @@ export default new Router({
       path: '/Alert',
       name: 'Alert',
       component: Alert
+    }, {
+      path: '/Register',
+      name: 'Register',
+      component: Register
     }
   ]
 })

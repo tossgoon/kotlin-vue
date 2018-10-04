@@ -3,7 +3,8 @@ export default {
   urlList () {
     return {
       user: {
-        getUser: '/api/user/get'
+        get: '/api/user/get',
+        resister: '/api/user/resister'
       },
       system: {}
     }

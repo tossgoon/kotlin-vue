@@ -66,12 +66,11 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  methods:
-      {
-        test: function () {
-          this.$router.push({path: '/Index', params: {id: '1'}})
-        }
-      }
+  methods: {
+    test: function () {
+      this.$router.push({path: '/Index', params: {id: '1'}})
+    }
+  }
 }
 </script>
 
