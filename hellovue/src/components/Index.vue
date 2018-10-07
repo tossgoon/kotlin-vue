@@ -13,7 +13,7 @@
     <button @click="showOrHideButton">showOrHideButton</button>
 
     <label for="txt3x"></label>
-    <input type="text" id="txt3x" v-if="status == 1"/>
+    <input type="text" id="txt3x" v-focus v-if="status == 1"/>
     <input type="text" v-model="status"/>
 
     <ul>

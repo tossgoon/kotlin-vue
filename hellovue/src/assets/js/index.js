@@ -35,6 +35,11 @@ export default {
   },
   mounted: function () {
     this.$refs.txt1.value = 'test'
+    this.directive('focus', {
+      inserted: function (el) {
+        el.focus()
+      }
+    })
   }
 }
 
