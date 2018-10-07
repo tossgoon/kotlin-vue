@@ -4,6 +4,12 @@
   "description": "My solid Nuxt.js project",
   "author": "wangy",
   "private": true,
+  "main": "dist/bootstrap-vue.common.js",
+  "types": "src/index.d.ts",
+  "web": "dist/bootstrap-vue.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "style": "dist/bootstrap-vue.css",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

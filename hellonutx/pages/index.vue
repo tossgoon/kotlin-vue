@@ -1,23 +1,17 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
-      <appLogo/>
       <h1 class="title">
-        hellonutx
+        nutx vue study
       </h1>
       <h2 class="subtitle">
-        My solid Nuxt.js project
+        My first Nuxt.js project
       </h2>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="/user"
           target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+          class="button--green">Get In Study</a>
       </div>
     </div>
   </section>
