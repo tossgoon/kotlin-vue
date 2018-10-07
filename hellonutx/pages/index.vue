@@ -2,6 +2,7 @@
   <section class="container">
     <div>
       <logo/>
+      <appLogo/>
       <h1 class="title">
         hellonutx
       </h1>
@@ -24,10 +25,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import AppLogo from '~/components/AppLogo.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    AppLogo
   }
 }
 </script>

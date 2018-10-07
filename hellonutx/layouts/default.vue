@@ -1,8 +1,17 @@
 <template>
   <div>
+    <mNav/>
     <nuxt/>
   </div>
 </template>
+
+<script>
+import mNav from './nav.vue'
+
+export default {
+  components: { mNav }
+}
+</script>
 
 <style>
 html {
