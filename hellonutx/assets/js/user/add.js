@@ -1,3 +1,6 @@
+import http from '~/assets/js/api/http.js'
+import Api from '~/assets/js/api/api.js'
+
 export default {
   name: '',
   data() {
@@ -9,15 +12,14 @@ export default {
   },
   asyncData({ route, app }) {
     let getId = route.query.id
-    let data = app.$axios.get('http://localhost:8078/user/get?id=' + getId)
-    console.log(data)
-    return {
-      id: data.id,
-      name: data.name,
-      age: data.age
-    }
+    http(Api.getUser, { id: 1 }).then(
+      res => {
+        console.log(res)
+      },
+      error => {
+        console.log(error)
+      }
+    )
   },
-  created() {
-    // console.log('jjjjjjjjjjjjj' + this.id)
-  }
+  created() {}
 }

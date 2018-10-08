@@ -20,7 +20,7 @@ class UserController {
     }
 
     @RequestMapping(value = "get")
-    fun getUser(id: Long): User {
+    fun getUser(id: Long?): User {
         return User(id = id, name = "wangyu", age = "vue-study-test");
     }
 }

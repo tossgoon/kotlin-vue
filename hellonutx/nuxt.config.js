@@ -37,7 +37,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    '@gauseen/nuxt-proxy',
+    //'@gauseen/nuxt-proxy',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt'
   ],
@@ -50,7 +50,7 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
   proxy: {
-    '/api/': { target: 'http://localhost:8078', pathRewrite: { '^/api/': '' } }
+    '/api/': { target: 'http://localhost:8078', pathRewrite: { '^/api/': '/' } }
   },
 
   /*
@@ -60,6 +60,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    vendor: ['axios'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
