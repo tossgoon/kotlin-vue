@@ -1,4 +1,9 @@
+let baseUrl = 'http://localhost:8078/'
 const Api = {
-  getUser: { url: 'user/get', method: 'get' }
+  user: {
+    get: { url: baseUrl + 'user/get', method: 'get' },
+    del: { url: baseUrl + 'user/del', method: 'get' }
+  }
 }
+
 export default Api

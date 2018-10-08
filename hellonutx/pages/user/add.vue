@@ -2,9 +2,8 @@
 </script>
 <template>
   <div>
-    {{ id }}
     {{ name }}
-    {{ age }}
+    <button @click="changeName">Change</button>
   </div>
 </template>
 

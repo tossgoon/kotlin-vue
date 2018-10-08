@@ -1,25 +1,16 @@
-import http from '~/assets/js/api/http.js'
-import Api from '~/assets/js/api/api.js'
+import axios from 'axios'
+import api from '~/assets/js/api/api.js'
 
 export default {
-  name: '',
-  data() {
-    return {
-      id: '1',
-      name: '2',
-      age: '3'
+  async asyncData({ route, app }) {
+    let getId = route.query.id
+    let res = await axios.get(api.user.get.url)
+    return { name: res.data.name }
+  },
+  methods: {
+    changeName(name) {
+      name = name + 'change'
     }
   },
-  asyncData({ route, app }) {
-    let getId = route.query.id
-    http(Api.getUser, { id: 1 }).then(
-      res => {
-        console.log(res)
-      },
-      error => {
-        console.log(error)
-      }
-    )
-  },
-  created() {}
+  mounted() {}
 }

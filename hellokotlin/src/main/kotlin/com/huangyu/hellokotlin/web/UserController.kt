@@ -15,12 +15,11 @@ class UserController {
 
     @RequestMapping(value = "add")
     fun addUser(): User {
-        var user: User = this.userService.add("wangyu", "100");
-        return user;
+        return userService.add("wangyu", "100")
     }
 
     @RequestMapping(value = "get")
     fun getUser(id: Long?): User {
-        return User(id = id, name = "wangyu", age = "vue-study-test");
+        return User(id = id, name = "wangyu", age = "vue-study-test")
     }
 }
