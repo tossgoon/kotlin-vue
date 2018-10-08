@@ -8,10 +8,10 @@
         My first Nuxt.js project
       </h2>
       <div class="links">
-        <a
-          href="/user"
-          target="_blank"
-          class="button--green">Get In Study</a>
+        <nuxt-link
+          to="/user"
+          class="button--green">Get In Study
+        </nuxt-link>
       </div>
     </div>
   </section>
