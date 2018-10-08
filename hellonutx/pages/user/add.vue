@@ -2,8 +2,8 @@
 </script>
 <template>
   <div>
+    {{ id }}
     {{ name }}
-    <button @click="changeName">Change</button>
   </div>
 </template>
 
