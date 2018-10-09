@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import navBar from '~/components/Navbar.vue'
-import mFooter from '~/components/Footer.vue'
-import mSidebar from '~/components/Sidebar.vue'
+import navBar from '~/docs/components/Navbar.vue'
+import mFooter from '~/docs/components/Footer.vue'
+import mSidebar from '~/docs/components/Sidebar.vue'
 
 export default {
   components: { navBar, mFooter, mSidebar }

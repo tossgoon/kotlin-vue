@@ -5,7 +5,7 @@
     is-nav
     class="bd-links">
     <router-link
-      v-for="group in nav"
+      v-for="group in subNav"
       :key="group.base"
       :to="'/docs/' + group.base"
       :exact="group.exact"
@@ -75,11 +75,11 @@
 </style>
 
 <script>
-import { nav } from './content/index.js'
+import { subNav } from '../content/subNav.js'
 
 export default {
   computed: {
-    nav: () => nav
+    subNav: () => subNav
   }
 }
 </script>
