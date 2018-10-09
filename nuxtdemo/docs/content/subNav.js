@@ -1,6 +1,10 @@
 export const subNav = [
   {
-    title: 'Getting started',
-    base: ''
+    title: 'UserIndex',
+    url: '/user'
+  },
+  {
+    title: 'AddUser',
+    url: '/user/add'
   }
 ]

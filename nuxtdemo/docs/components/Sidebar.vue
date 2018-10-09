@@ -6,15 +6,15 @@
     class="bd-links">
     <router-link
       v-for="group in subNav"
-      :key="group.base"
-      :to="'/docs/' + group.base"
+      :key="group.url"
+      :to="group.url"
       :exact="group.exact"
       active-class="active"
       class="bd-toc-item"
       tag="div">
 
       <router-link
-        :to="'/docs/' + group.base"
+        :to="group.url"
         :exact="group.exact"
         class="bd-toc-link">
         {{ group.title }}
