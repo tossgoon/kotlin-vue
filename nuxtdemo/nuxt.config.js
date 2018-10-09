@@ -1,3 +1,4 @@
+const fs = require('fs')
 const pkg = require('./package')
 
 module.exports = {

@@ -15,9 +15,9 @@
             >
           </div>
           <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-            <h1 class="mb-3 bd-text-purple-bright">Bootstrap + Vue</h1>
+            <h1 class="mb-3 bd-text-purple-bright">Nuxt + Bootstrap</h1>
             <p class="lead">
-              Build responsive, mobile-first projects on the web using Vue.js and the world's most popular front-end CSS library &mdash; Bootstrap V4.
+              Nuxt + Bootstrap Study
             </p>
             <p class="lead mb-3">
               <span class="bd-text-purple-bright">Bootstrap-Vue</span> provides one of the most comprehensive implementations
@@ -38,7 +38,7 @@
                 class="mb-3 mb-md-0 mr-md-3">Get started
               </b-btn>
               <b-btn
-                href="https://github.com/bootstrap-vue/bootstrap-vue"
+                href="https://github.com/szwangyu/kotlin-vue/tree/master/nuxtdemo"
                 variant="outline-secondary"
                 size="lg"
                 target="_blank">Github

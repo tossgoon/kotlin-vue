@@ -18,7 +18,7 @@
 
 .hljs {
   font-family: 'Inconsolata', 'Monaco', 'Andale Mono', 'Lucida Console',
-    'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important;
+  'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important;
   font-size: 17px;
   overflow-x: auto;
   position: relative;
@@ -85,6 +85,10 @@ pre.editable.live:after {
   font-size: 85%;
   text-align: center;
   background-color: #f7f7f7;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
 }
 
 .bv-example-row .row + .row {
