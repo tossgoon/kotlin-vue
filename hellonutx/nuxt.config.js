@@ -72,5 +72,11 @@ module.exports = {
         })
       }
     }
-  }
+  },
+
+  css: [
+    'bootstrap/dist/css/bootstrap.css',
+    './assets/css/docs.min.css',
+    './assets/css/styles.css'
+  ]
 }

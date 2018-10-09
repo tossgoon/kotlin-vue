@@ -1,6 +1,30 @@
 <template>
   <div>
-    <textarea>x</textarea>
+    <textarea>x</textarea><br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+
   </div>
 </template>
 
