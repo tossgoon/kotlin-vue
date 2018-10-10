@@ -42,14 +42,11 @@
       class="justify-content-between">
       <b-navbar-nav>
         <b-nav-item
-          to="/user"
-          exact>User
+          to="/user">UserManage
         </b-nav-item>
-        <b-nav-item to="/docs/components">Components</b-nav-item>
-        <b-nav-item to="/docs/directives">Directives</b-nav-item>
-        <b-nav-item to="/docs/reference">Reference</b-nav-item>
-        <b-nav-item to="/docs/misc">Misc</b-nav-item>
-        <b-nav-item to="/play">Play</b-nav-item>
+        <b-nav-item
+          to="/blog">BlogManage
+        </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

@@ -1,10 +1,21 @@
+let users = [
+  {
+    slug: '/add',
+    title: 'add'
+  }
+]
+
+let blogs = [
+  {
+    slug: '/add',
+    title: 'add'
+  }
+]
+
 export const subNav = [
   {
-    title: 'UserIndex',
-    url: '/user'
-  },
-  {
-    title: 'AddUser',
-    url: '/user/add'
+    title: 'User',
+    base: '/user',
+    pages: users
   }
 ]

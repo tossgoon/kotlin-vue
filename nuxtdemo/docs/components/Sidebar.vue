@@ -6,15 +6,15 @@
     class="bd-links">
     <router-link
       v-for="group in subNav"
-      :key="group.url"
-      :to="group.url"
+      :key="group.base"
+      :to="group.base"
       :exact="group.exact"
       active-class="active"
       class="bd-toc-item"
       tag="div">
 
       <router-link
-        :to="group.url"
+        :to="group.base"
         :exact="group.exact"
         class="bd-toc-link">
         {{ group.title }}
@@ -35,9 +35,10 @@
       <b-nav class="bd-sidenav">
         <b-nav-item
           v-for="page in group.pages"
-          :to="('/docs/' + group.base + page.slug).replace(/\/\//g,'/')"
-          :key="page.title
-          ">
+          :to="(group.base + page.slug).replace(/\/\//g,'/')"
+          :key="page.title"
+          :exact="group.exact"
+          class="bd-toc-link">
           {{ page.title }}
           <b-badge
             v-if="page.new"

@@ -1,22 +1,24 @@
 @import './fonts.css';
 
 * {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
-.bd-toc-link, .bd-navbar .navbar-nav .nav-link.active {
+.bd-toc-link,
+.bd-navbar .navbar-nav .nav-link.active {
   font-weight: normal;
 }
 
-.bd-toc-link .badge, .bd-sidenav .badge {
+.bd-toc-link .badge,
+.bd-sidenav .badge {
   font-size: 70%;
   position: relative;
   bottom: 0.1rem;
 }
 
 .hljs {
-  font-family: "Inconsolata", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New",
-    Courier, monospace !important;
+  font-family: 'Inconsolata', 'Monaco', 'Andale Mono', 'Lucida Console',
+  'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important;
   font-size: 17px;
   overflow-x: auto;
   position: relative;
@@ -44,7 +46,8 @@ blockquote {
 .bd-content > h2,
 .bd-content > h3,
 .bd-content > h4,
-.bd-content > h5 {
+.bd-content > h5,
+.bd-content {
   padding-top: 25px;
   padding-bottom: 15px;
 }
@@ -60,7 +63,7 @@ pre.editable:after {
   right: 0;
   color: #aaa;
   text-align: right;
-  font-size: .75em;
+  font-size: 0.75em;
   padding: 5px 10px 0;
   line-height: 15px;
   height: 15px;
@@ -68,7 +71,7 @@ pre.editable:after {
 }
 
 pre.editable:hover:after {
-  font-size: .9em;
+  font-size: 0.9em;
   color: #444;
   cursor: pointer;
 }
@@ -90,14 +93,14 @@ pre.editable.live:after {
 }
 
 .bv-example-row .row > .col:not(.header),
-.bv-example-row .row > [class^=col-] {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  background-color: rgba(86, 61, 124, .15);
-  border: 1px solid rgba(86, 61, 124, .2);
+.bv-example-row .row > [class^='col-'] {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
 }
 
 .bv-example-row-flex-cols .row {
   min-height: 10rem;
-  background-color: rgba(255, 0, 0, .1);
+  background-color: rgba(255, 0, 0, 0.1);
 }

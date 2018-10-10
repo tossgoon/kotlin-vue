@@ -21,13 +21,13 @@
               :href="issueURL"
               size="sm"
               variant="light"
-              target="_blank">Report an issue
+              target="_blank">Hard Work
             </b-btn>
             <b-btn
               :href="editPageURL"
               size="sm"
               variant="light"
-              target="_blank">Edit this page
+              target="_blank">Happy Life
             </b-btn>
           </b-button-group>
 
@@ -45,32 +45,10 @@ import mFooter from '~/docs/components/Footer.vue'
 
 export default {
   components: { mSidebar, mNav, mFooter },
-  computed: {
-    editPageURL() {
-      const base = 'https://github.com/bootstrap-vue/bootstrap-vue/tree/dev'
-      let path = '/'
-      const name = this.$route.name
-      const slug = this.$route.params.slug
-      if (name === 'docs') {
-        path = `/docs/markdown/intro/README.md`
-      } else if (name === 'docs-components-slug') {
-        path = `/src/components/${slug}/README.md`
-      } else if (name === 'docs-directives-slug') {
-        path = `/src/directives/${slug}/README.md`
-      } else if (name === 'docs-reference-slug') {
-        path = `/docs/markdown/reference/${slug}/README.md`
-      } else if (name === 'docs-misc-slug') {
-        if (slug === 'changelog') {
-          path = `/CHANGELOG.md`
-        } else if (slug === 'contributing') {
-          path = `/CONTRIBUTING.md`
-        }
-      }
-      return base + path
-    },
-    issueURL() {
-      // Add appreciate query params for proper issue title
-      return 'https://github.com/bootstrap-vue/bootstrap-vue/issues/new?title=Docs'
+  data: function() {
+    return {
+      issueURL: 'http://www.huangyukeji.com',
+      editPageURL: 'http://www.huangyukeji.com'
     }
   }
 }
