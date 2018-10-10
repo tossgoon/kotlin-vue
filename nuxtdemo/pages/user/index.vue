@@ -1,5 +1,5 @@
 <template>
-  <div><h1>Index</h1></div>
+  <div><h1>user index</h1></div>
 </template>
 
 <script>

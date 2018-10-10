@@ -2,6 +2,7 @@
 </script>
 <template>
   <div>
+    <h1>user add</h1>
     <main
       id="content"
       class="bd-content"
