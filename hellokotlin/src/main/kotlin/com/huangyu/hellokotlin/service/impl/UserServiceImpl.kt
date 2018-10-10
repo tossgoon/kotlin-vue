@@ -14,8 +14,20 @@ class UserServiceImpl : UserService {
 
     override fun add(name: String, age: String): User {
         val user = User(id = null, name = name, age = age)
-        this.userRepository.save(user)
+        userRepository.save(user)
 
         return user
+    }
+
+    override fun get(id: Long?): User {
+        return userRepository.getOne(id)
+    }
+
+    override fun list(): List<User> {
+        return userRepository.findAll()
+    }
+
+    override fun del(id: Long?) {
+        userRepository.delete(id)
     }
 }

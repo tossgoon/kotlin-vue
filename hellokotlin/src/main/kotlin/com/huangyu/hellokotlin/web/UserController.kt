@@ -20,6 +20,16 @@ class UserController {
 
     @RequestMapping(value = "get")
     fun getUser(id: Long?): User {
-        return User(id = id, name = "wangyu", age = "vue-study-test")
+        return userService.get(id)
+    }
+
+    @RequestMapping(value = "list")
+    fun getUserList(): List<User> {
+        return userService.list()
+    }
+
+    @RequestMapping(value = "del")
+    fun delUser(id: Long?) {
+        userService.del(id)
     }
 }
