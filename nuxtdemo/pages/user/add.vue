@@ -51,11 +51,6 @@
           type="reset"
           variant="danger">Reset
         </b-button>
-        <b-button
-          type="button"
-          variant="danger"
-          @click="test">Test
-        </b-button>
       </b-form>
     </main>
   </div>

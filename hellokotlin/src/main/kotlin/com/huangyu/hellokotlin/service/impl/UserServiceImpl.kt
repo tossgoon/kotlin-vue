@@ -12,11 +12,8 @@ class UserServiceImpl : UserService {
     @Autowired
     lateinit var userRepository: UserRepository
 
-    override fun add(name: String, age: String?, phone: String): User {
-        val user = User(id = null, name = name, age = age, phone = phone)
-        userRepository.save(user)
-
-        return user
+    override fun add(user: User): User {
+        return userRepository.save(user)
     }
 
     override fun get(id: Long?): User {

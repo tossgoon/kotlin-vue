@@ -1,13 +1,11 @@
-<template>
-  <div><h1>user index</h1></div>
-</template>
-
-<script>
-export default {
-  name: '',
-  layout: 'func'
-}
+<script src="../../assets/js/user/index.js">
 </script>
-
-<style scoped>
-</style>
+<template>
+  <div>
+    <h1>user list</h1>
+    <b-table
+      :items="items"
+      striped
+      hover/>
+  </div>
+</template>

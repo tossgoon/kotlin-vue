@@ -15,7 +15,7 @@
 
       <router-link
         :to="group.base"
-        :exact="group.exact"
+        exact
         class="bd-toc-link">
         {{ group.title }}
         <small
@@ -37,7 +37,7 @@
           v-for="page in group.pages"
           :to="(group.base + page.slug).replace(/\/\//g,'/')"
           :key="page.title"
-          :exact="group.exact"
+          exact
           class="bd-toc-link">
           {{ page.title }}
           <b-badge

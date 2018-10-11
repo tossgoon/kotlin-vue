@@ -1,7 +1,15 @@
 let users = [
   {
+    slug: '/',
+    title: 'index'
+  },
+  {
     slug: '/add',
     title: 'add'
+  },
+  {
+    slug: '/test',
+    title: 'test'
   }
 ]
 

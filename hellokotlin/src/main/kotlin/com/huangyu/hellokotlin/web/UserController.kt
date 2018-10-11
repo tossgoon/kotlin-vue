@@ -1,5 +1,6 @@
 package com.huangyu.hellokotlin.web
 
+import com.google.gson.Gson
 import com.huangyu.hellokotlin.dao.User
 import com.huangyu.hellokotlin.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
@@ -14,8 +15,9 @@ class UserController {
     lateinit var userService: UserService
 
     @RequestMapping(value = "add")
-    fun addUser(name: String, age: String?, phone: String): User {
-        return userService.add(name, age, phone)
+    fun addUser(userJson: String): User {
+        val user: User = Gson().fromJson(userJson, User::class.java)
+        return userService.add(user)
     }
 
     @RequestMapping(value = "get")

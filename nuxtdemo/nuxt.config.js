@@ -30,14 +30,16 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/api'],
+  // plugins: ['~/plugins/api'],
+  plugins: [{ src: '@/plugins/main', ssr: true }],
 
   /*
-  ** Nuxt.js modules
+  ** Nuxt.js modulesOrigin 'http://127.0.0.1:3000' is therefore not allowed access.
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt'
   ],
@@ -47,6 +49,7 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
+  proxy: {},
 
   /*
   ** Build configuration

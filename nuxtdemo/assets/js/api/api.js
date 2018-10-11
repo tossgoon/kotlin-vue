@@ -1,6 +1,4 @@
-import Vue from 'vue'
-
-let host = 'http://localhost:8078/'
+let host = 'http://127.0.0.1:8078/'
 const Api = {
   user: {
     get: host + 'user/get',
@@ -9,4 +7,4 @@ const Api = {
   }
 }
 
-Vue.prototype.$api = Api
+export default Api
