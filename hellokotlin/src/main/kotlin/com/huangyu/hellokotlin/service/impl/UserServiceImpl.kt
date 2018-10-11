@@ -21,7 +21,8 @@ class UserServiceImpl : UserService {
     }
 
     override fun list(): List<User> {
-        return userRepository.findAll()
+        val list= userRepository.findAll()
+        return list
     }
 
     override fun del(id: Long?) {
