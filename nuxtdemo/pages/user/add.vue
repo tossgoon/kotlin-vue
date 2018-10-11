@@ -1,4 +1,4 @@
-<script src="../../assets/js/user/userAdd.js">
+<script src="../../assets/js/user/add.js">
 </script>
 <template>
   <div>
@@ -13,44 +13,35 @@
         @reset="onReset">
         <b-form-group
           id="exampleInputGroup1"
-          label="Email address:"
-          label-for="exampleInput1"
-          description="We'll never share your email with anyone else.">
-          <b-form-input
-            id="exampleInput1"
-            v-model="form.email"
-            type="email"
-            required
-            placeholder="Enter email"/>
-        </b-form-group>
-        <b-form-group
-          id="exampleInputGroup2"
           label="Your Name:"
-          label-for="exampleInput2">
+          label-for="exampleInput1"
+          description="User's name and phone is unique">
           <b-form-input
-            id="exampleInput2"
+            id="txtName"
             v-model="form.name"
             type="text"
             required
             placeholder="Enter name"/>
         </b-form-group>
         <b-form-group
-          id="exampleInputGroup3"
-          label="Food:"
-          label-for="exampleInput3">
-          <b-form-select
-            id="exampleInput3"
-            :options="foods"
-            v-model="form.food"
-            required/>
+          id="exampleInputGroup2"
+          label="Your Age:"
+          label-for="exampleInput2">
+          <b-form-input
+            id="txtAge"
+            v-model="form.age"
+            type="text"
+            placeholder="Enter age"/>
         </b-form-group>
-        <b-form-group id="exampleGroup4">
-          <b-form-checkbox-group
-            id="exampleChecks"
-            v-model="form.checked">
-            <b-form-checkbox value="me">Check me out</b-form-checkbox>
-            <b-form-checkbox value="that">Check that out</b-form-checkbox>
-          </b-form-checkbox-group>
+        <b-form-group
+          id="exampleInputGroup3"
+          label="Your Phone Num:"
+          label-for="exampleInput3">
+          <b-form-input
+            id="txtPhone"
+            v-model="form.phone"
+            required
+            placeholder="Enter phone num"/>
         </b-form-group>
         <b-button
           type="submit"
@@ -59,6 +50,11 @@
         <b-button
           type="reset"
           variant="danger">Reset
+        </b-button>
+        <b-button
+          type="button"
+          variant="danger"
+          @click="test">Test
         </b-button>
       </b-form>
     </main>

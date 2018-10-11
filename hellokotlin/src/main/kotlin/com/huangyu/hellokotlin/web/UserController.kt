@@ -14,8 +14,8 @@ class UserController {
     lateinit var userService: UserService
 
     @RequestMapping(value = "add")
-    fun addUser(): User {
-        return userService.add("wangyu", "100")
+    fun addUser(name: String, age: String?, phone: String): User {
+        return userService.add(name, age, phone)
     }
 
     @RequestMapping(value = "get")

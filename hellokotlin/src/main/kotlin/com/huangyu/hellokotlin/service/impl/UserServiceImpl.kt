@@ -12,8 +12,8 @@ class UserServiceImpl : UserService {
     @Autowired
     lateinit var userRepository: UserRepository
 
-    override fun add(name: String, age: String): User {
-        val user = User(id = null, name = name, age = age)
+    override fun add(name: String, age: String?, phone: String): User {
+        val user = User(id = null, name = name, age = age, phone = phone)
         userRepository.save(user)
 
         return user
