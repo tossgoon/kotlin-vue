@@ -9,8 +9,8 @@ export default {
     }
   },
   methods: {
-    showDetail() {
-      this.$router.push({ path: '/user/add', query: { id: 1 } })
+    showDetail(id) {
+      this.$router.push({ path: '/user/add', query: { id: id } })
     }
   }
 }

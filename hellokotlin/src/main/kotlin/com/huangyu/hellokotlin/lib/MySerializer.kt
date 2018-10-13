@@ -20,7 +20,7 @@ object MyLongSerializer : KSerializer<Long> {
         return try {
             input.readLongValue()
         } catch (e: Exception) {
-            0
+            0 // TODO
         } finally {
             null
         }

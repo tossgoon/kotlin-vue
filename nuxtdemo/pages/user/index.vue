@@ -13,7 +13,7 @@
         <b-button
           size="sm"
           class="mr-2"
-          @click="showDetail">
+          @click="showDetail(row.item.id)">
           Details
         </b-button>
       </template>

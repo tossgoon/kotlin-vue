@@ -93,13 +93,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="71" />
-          <entry key="kt" value="861" />
+          <entry key="kt" value="869" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="71" />
-          <entry key="Kotlin" value="861" />
+          <entry key="Kotlin" value="869" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -134,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/lib/MySerializer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="378">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding>
                 <element signature="e#37#190#0" expanded="true" />
               </folding>
@@ -176,11 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.19.RELEASE/2a6480d3e27489725180be236ac7c7aac743a17e/spring-web-4.3.19.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="215" column="57" lean-forward="true" selection-start-line="215" selection-start-column="57" selection-end-line="215" selection-end-column="57" />
+            <state relative-caret-position="321">
+              <caret line="222" column="13" lean-forward="true" selection-start-line="222" selection-start-column="13" selection-end-line="222" selection-end-column="13" />
               <folding>
                 <element signature="method#invokeForRequest#0;class#InvocableHandlerMethod#0" expanded="true" />
               </folding>
@@ -721,9 +721,9 @@
         <option value="$PROJECT_DIR$/src/note/json.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/GsonLongTypeAdapter.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/lib/MyLongSerializer.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/lib/MySerializer.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/lib/MySerializer.kt" />
       </list>
     </option>
   </component>
@@ -871,7 +871,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539443477587" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539443752425" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../common/src/base" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -1011,12 +1011,12 @@
       <workItem from="1539339544420" duration="1193000" />
       <workItem from="1539340776984" duration="1817000" />
       <workItem from="1539419084245" duration="10051000" />
-      <workItem from="1539434003963" duration="9385000" />
+      <workItem from="1539434003963" duration="9439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54064000" />
+    <option name="totallyTimeSpent" value="54118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1029,6 +1029,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -1431,16 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/lib/MySerializer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#37#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1473,10 +1464,20 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.19.RELEASE/2a6480d3e27489725180be236ac7c7aac743a17e/spring-web-4.3.19.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="215" column="57" lean-forward="true" selection-start-line="215" selection-start-column="57" selection-end-line="215" selection-end-column="57" />
+        <state relative-caret-position="321">
+          <caret line="222" column="13" lean-forward="true" selection-start-line="222" selection-start-column="13" selection-end-line="222" selection-end-column="13" />
           <folding>
             <element signature="method#invokeForRequest#0;class#InvocableHandlerMethod#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/lib/MySerializer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="e#37#190#0" expanded="true" />
           </folding>
         </state>
       </provider>
