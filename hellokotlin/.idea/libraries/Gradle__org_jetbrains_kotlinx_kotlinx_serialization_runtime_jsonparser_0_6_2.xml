@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-jsonparser:0.6.2" type="kotlin.common">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-runtime-jsonparser/0.6.2/20dd81c4a4195cfa6b3d290496654cbd664cb092/kotlinx-serialization-runtime-jsonparser-0.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-runtime-jsonparser/0.6.2/289759e697b65da77eac098ae99b50e300ae1d1/kotlinx-serialization-runtime-jsonparser-0.6.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

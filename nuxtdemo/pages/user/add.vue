@@ -11,6 +11,10 @@
         v-if="show"
         @submit="onSubmit"
         @reset="onReset">
+        <b-form-input
+          id="txtName"
+          v-model="form.id"
+          type="text"/>
         <b-form-group
           id="exampleInputGroup1"
           label="Your Name:"

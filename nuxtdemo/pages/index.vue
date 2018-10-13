@@ -32,7 +32,7 @@
             </p>
             <div class="d-flex flex-column flex-md-row lead mb-3">
               <b-btn
-                to="/docs"
+                to="/user"
                 variant="bd-primary"
                 size="lg"
                 class="mb-3 mb-md-0 mr-md-3">Get started

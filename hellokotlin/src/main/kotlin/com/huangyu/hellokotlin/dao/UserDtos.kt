@@ -1,9 +1,15 @@
 package com.huangyu.hellokotlin.dao
 
+import com.huangyu.hellokotlin.lib.MyLongSerializer
+import kotlinx.serialization.Serializable
 import javax.persistence.*
 
+
+@Serializable
 @Entity
 @Table(name = "kotlin_users")
-data class User constructor(@Id @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Long?, var name: String, var age: String?, var phone: String) {
-    constructor() : this(1, "wangyu", "", "18689495151")
-}
+data class User(@Id @GeneratedValue(
+        strategy = GenerationType.IDENTITY) @Serializable(with = MyLongSerializer::class) var id: Long? = null,
+                var name: String = "",
+                var age: String? = null,
+                var phone: String = "")
