@@ -4,11 +4,12 @@ import com.huangyu.hellokotlin.dao.User
 import com.huangyu.hellokotlin.dao.repo.UserRepository
 import com.huangyu.hellokotlin.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.PageRequest
 import org.springframework.stereotype.Service
 
 @Service
 class UserServiceImpl : UserService {
-
     @Autowired
     lateinit var userRepository: UserRepository
 
@@ -20,9 +21,9 @@ class UserServiceImpl : UserService {
         return userRepository.getOne(id)
     }
 
-    override fun list(): List<User> {
-        val list= userRepository.findAll()
-        return list
+    override fun page(pageIndex: Int, pageSize: Int): Page<User> {
+        val pageRequest = PageRequest(pageIndex, pageSize)
+        return userRepository.findAll(pageRequest)
     }
 
     override fun del(id: Long?) {

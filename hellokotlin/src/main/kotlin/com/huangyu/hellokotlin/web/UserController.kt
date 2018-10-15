@@ -1,6 +1,7 @@
 package com.huangyu.hellokotlin.web
 
 import com.huangyu.hellokotlin.dao.User
+import com.huangyu.hellokotlin.dao.page.BootstrapPage
 import com.huangyu.hellokotlin.lib.MyLongSerializer
 import com.huangyu.hellokotlin.service.UserService
 import kotlinx.serialization.SerialContext
@@ -30,9 +31,10 @@ class UserController {
         return userService.get(id)
     }
 
-    @RequestMapping(value = "list")
-    fun getUserList(): List<User> {
-        return userService.list()
+    @RequestMapping(value = "page")
+    fun getUserPage(pageIndex: Int, pageSize: Int): BootstrapPage<User> {
+        val page = userService.page(pageIndex, pageSize)
+        return BootstrapPage(Integer.parseInt(page.totalElements.toString()), page.toList())
     }
 
     @RequestMapping(value = "del")

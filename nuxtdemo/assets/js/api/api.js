@@ -4,7 +4,7 @@ const Api = {
     get: host + 'user/get',
     add: host + 'user/add',
     del: host + 'user/del',
-    list: host + 'user/list'
+    page: host + 'user/page'
   }
 }
 
