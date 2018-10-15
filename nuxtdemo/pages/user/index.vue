@@ -4,9 +4,16 @@
   <div>
     <h1>user list</h1>
     <b-table
-      :items="items"
-      :fields="fields">
-
+      id="table_user"
+      ref="table_user"
+      :busy.sync="isBusy"
+      :items="myProvider"
+      :fields="fields"
+      :per-page="perPage"
+      :current-page="currentPage"
+      :filter="filter"
+      stacked="md"
+      show-empty>
       <template
         slot="show"
         slot-scope="row">
@@ -17,7 +24,17 @@
           Details
         </b-button>
       </template>
-
     </b-table>
+    <b-row>
+      <b-col
+        md="6"
+        class="my-1">
+        <b-pagination
+          v-model="currentPage"
+          :total-rows="totalRows"
+          :per-page="perPage"
+          class="my-0"/>
+      </b-col>
+    </b-row>
   </div>
 </template>

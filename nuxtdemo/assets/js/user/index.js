@@ -1,16 +1,32 @@
 export default {
-  name: '',
   layout: 'func',
-  async asyncData({ route, app }) {
-    let res = await app.$axios.get(app.$api.user.list)
+  data() {
     return {
-      fields: ['id', 'name', 'age', 'phone', 'show'],
-      items: res.data
+      isBusy: false,
+      fields: [],
+      items: [],
+      currentPage: 1,
+      perPage: 10,
+      totalRows: 20,
+      pageIndex: this.$pageIndex,
+      pageSize: this.$pageSize,
+      filter: null
     }
   },
   methods: {
-    showDetail(id) {
+    showDetail: function(id) {
       this.$router.push({ path: '/user/add', query: { id: id } })
+    },
+    myProvider: async function() {
+      this.pageIndex = this.currentPage - 1
+      let res = await this.$axios.get(this.$api.user.page, {
+        params: {
+          pageIndex: this.pageIndex,
+          pageSize: this.pageSize
+        }
+      })
+      return res.data.items || []
     }
-  }
+  },
+  mounted() {}
 }
