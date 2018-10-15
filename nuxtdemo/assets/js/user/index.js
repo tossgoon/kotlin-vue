@@ -1,8 +1,9 @@
+import BootstrapPagination from '../../../docs/components/pagination/BootstrapPagination'
+
 export default {
   layout: 'func',
-  methods: {
-    showDetail: function(id) {
-      this.$router.push({ path: '/user/add', query: { id: id } })
-    }
-  }
+  created() {
+    // alert(BootstrapPagination.data().fields)
+  },
+  methods: {}
 }

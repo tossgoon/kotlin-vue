@@ -13,16 +13,10 @@ export default {
       filter: null
     }
   },
-  install(Vue, options) {
-    Vue.mixin({
-      methods: {
-        showDetail: function(id) {
-          alert(id)
-        }
-      }
-    })
-  },
   methods: {
+    showDetail: function(id) {
+      this.$router.push({ path: '/user/add', query: { id: id } })
+    },
     myProvider: async function() {
       this.pageIndex = this.currentPage - 1
       let res = await this.$axios.get(this.$api.user.page, {
