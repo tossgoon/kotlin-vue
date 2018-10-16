@@ -8,7 +8,6 @@
       class="bd-content"
       role="main">
       <b-form
-        v-if="show"
         @submit="onSubmit"
         @reset="onReset">
         <b-form-input
@@ -48,6 +47,19 @@
             required
             placeholder="Enter phone num"/>
         </b-form-group>
+        <b-alert
+          :show="dismissCountDown"
+          dismissible
+          variant="warning"
+          @dismissed="dismissCountDown=0"
+          @dismiss-count-down="countDownChanged">
+          <p>Save successful,page will location to list after {{ dismissCountDown }} seconds...</p>
+          <b-progress
+            :max="dismissSecs"
+            :value="dismissCountDown"
+            variant="warning"
+            height="4px"/>
+        </b-alert>
         <b-button
           type="submit"
           variant="primary">Submit
