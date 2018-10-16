@@ -10,12 +10,13 @@ export default {
       totalRows: 0,
       pageIndex: 0,
       pageSize: 10,
-      filter: null
+      filter: null,
+      detailUrl: '/user/add'
     }
   },
   methods: {
     showDetail: function(id) {
-      this.$router.push({ path: '/user/add', query: { id: id } })
+      this.$router.push({ path: this.detailUrl, query: { id: id } })
     },
     myProvider: async function() {
       this.pageIndex = this.currentPage - 1
