@@ -12,7 +12,8 @@
         @submit="onSubmit"
         @reset="onReset">
         <b-form-input
-          id="txtName"
+          v-focus
+          id="txtId"
           v-model="form.id"
           type="text"/>
         <b-form-group

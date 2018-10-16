@@ -1,8 +1,8 @@
-import bFocus from './focusDriective'
+import focus from './focusDriective'
 import { registerDirectives, vueUse } from '~/utils/plugins.js'
 
 const directives = {
-  bFocus
+  focus
 }
 
 const VuePlugin = {
