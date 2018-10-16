@@ -40,6 +40,10 @@ export default {
     },
     countDownChanged(dismissCountDown) {
       this.dismissCountDown = dismissCountDown
+    },
+    test() {
+      alert(this.$testGlobalName)
+      this.$myMethod('----------')
     }
   }
 }

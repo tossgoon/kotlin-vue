@@ -18,7 +18,7 @@
         <b-form-group
           id="exampleInputGroup1"
           label="Your Name:"
-          label-for="exampleInput1"
+          label-for="txtName"
           description="User's name and phone is unique">
           <b-form-input
             id="txtName"
@@ -30,7 +30,7 @@
         <b-form-group
           id="exampleInputGroup2"
           label="Your Age:"
-          label-for="exampleInput2">
+          label-for="txtAge">
           <b-form-input
             id="txtAge"
             v-model="form.age"
@@ -40,7 +40,7 @@
         <b-form-group
           id="exampleInputGroup3"
           label="Your Phone Num:"
-          label-for="exampleInput3">
+          label-for="txtPhone">
           <b-form-input
             id="txtPhone"
             v-model="form.phone"
@@ -53,7 +53,7 @@
           variant="warning"
           @dismissed="dismissCountDown=0"
           @dismiss-count-down="countDownChanged">
-          <p>Save successful,page will location to list after {{ dismissCountDown }} seconds...</p>
+          <p>Save successful, page will location to list after {{ dismissCountDown }} seconds...</p>
           <b-progress
             :max="dismissSecs"
             :value="dismissCountDown"
@@ -67,6 +67,11 @@
         <b-button
           type="reset"
           variant="danger">Reset
+        </b-button>
+        <b-button
+          type="button"
+          variant="danger"
+          @click="test">Test
         </b-button>
       </b-form>
     </main>
