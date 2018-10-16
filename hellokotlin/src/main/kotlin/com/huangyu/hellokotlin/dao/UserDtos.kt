@@ -1,14 +1,18 @@
 package com.huangyu.hellokotlin.dao
 
-import kotlinx.serialization.Serializable
-import javax.persistence.Entity
-import javax.persistence.Table
+import javax.persistence.*
 
-
-@Serializable
-@Entity
-@Table(name = "kotlin_users")
+@Entity @Table(name = "kotlin_users")
 data class User(
         var name: String = "",
         var age: String? = null,
-        var phone: String = "") : BaseEntity()
+        var phone: String = "",
+        @OneToMany(mappedBy = "user") var carList: List<Car>? = null
+) : BaseEntity()
+
+@Entity @Table(name = "kotlin_user_cars")
+data class Car(
+        var name: String = "",
+        var brand: String = "",
+        @ManyToOne @JoinColumn(name = "user_id") var user: User? = null
+) : BaseEntity()

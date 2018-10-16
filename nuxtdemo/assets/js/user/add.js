@@ -1,5 +1,17 @@
 export default {
   layout: 'func',
+  data() {
+    return {
+      form: {
+        id: '',
+        name: '',
+        age: '',
+        phone: ''
+      },
+      dismissCountDown: 0,
+      dismissSecs: 5
+    }
+  },
   async asyncData({ route, app }) {
     let getId = route.query.id
     if (!getId) return
@@ -26,7 +38,8 @@ export default {
         .get(this.$api.user.add, {
           params: { userJson: userJson }
         })
-        .then(function() {
+        .then(function(res) {
+          alert(res)
           that.dismissCountDown = 5
         })
     },

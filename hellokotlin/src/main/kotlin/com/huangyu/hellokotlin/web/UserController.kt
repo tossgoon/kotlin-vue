@@ -1,11 +1,10 @@
 package com.huangyu.hellokotlin.web
 
+import com.google.gson.GsonBuilder
 import com.huangyu.hellokotlin.dao.User
 import com.huangyu.hellokotlin.dao.page.BootstrapPage
-import com.huangyu.hellokotlin.lib.MyLongSerializer
+import com.huangyu.hellokotlin.lib.gson.GsonLongTypeAdapter
 import com.huangyu.hellokotlin.service.UserService
-import kotlinx.serialization.SerialContext
-import kotlinx.serialization.json.JSON
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -19,10 +18,8 @@ class UserController {
 
     @RequestMapping(value = "add")
     fun addUser(userJson: String): User {
-        val json = JSON(context = SerialContext().apply {
-            registerSerializer(Long::class, MyLongSerializer)
-        })
-        val user = json.parse<User>(userJson)
+        val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).create()
+        val user = gson.fromJson<User>(userJson, User::class.java)
         return userService.add(user)
     }
 
