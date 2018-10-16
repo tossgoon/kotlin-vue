@@ -11,7 +11,7 @@
         @submit="onSubmit"
         @reset="onReset">
         <b-form-input
-          v-focus
+          v-my-focus
           id="txtId"
           v-model="form.id"
           type="text"/>

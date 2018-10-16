@@ -43,7 +43,7 @@ export default {
     },
     test() {
       alert(this.$testGlobalName)
-      this.$myMethod('----------')
+      Vue.test
     }
   }
 }
