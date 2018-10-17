@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    compile('com.huangyu.common:base:1.0.0')
+    compile('com.huangyu.common:base:1.1.0')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('com.fasterxml.jackson.module:jackson-module-kotlin')

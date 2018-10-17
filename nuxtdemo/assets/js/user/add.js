@@ -39,7 +39,6 @@ export default {
           params: { userJson: userJson }
         })
         .then(function(res) {
-          alert(res)
           that.dismissCountDown = 5
         })
     },
@@ -53,10 +52,13 @@ export default {
     },
     countDownChanged(dismissCountDown) {
       this.dismissCountDown = dismissCountDown
+      this.$router.push({ path: '/user' }) // TODO 添加 alert close 后事件
     },
     test() {
       alert(this.$testGlobalName)
-      Vue.test
+    },
+    closeFunc() {
+      alert('close 掉了')
     }
   }
 }

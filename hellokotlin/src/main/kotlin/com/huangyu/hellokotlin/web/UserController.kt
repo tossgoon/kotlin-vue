@@ -1,6 +1,7 @@
 package com.huangyu.hellokotlin.web
 
 import com.google.gson.GsonBuilder
+import com.huangyu.common.web.ApiResponse
 import com.huangyu.hellokotlin.dao.User
 import com.huangyu.hellokotlin.dao.page.BootstrapPage
 import com.huangyu.hellokotlin.lib.gson.GsonLongTypeAdapter
@@ -17,10 +18,11 @@ class UserController {
     lateinit var userService: UserService
 
     @RequestMapping(value = "add")
-    fun addUser(userJson: String): User {
+    fun addUser(userJson: String): ApiResponse {
         val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).create()
-        val user = gson.fromJson<User>(userJson, User::class.java)
-        return userService.add(user)
+        var user = gson.fromJson<User>(userJson, User::class.java)
+        user = userService.add(user)
+        return ApiResponse.ok(user)
     }
 
     @RequestMapping(value = "get")
@@ -29,9 +31,10 @@ class UserController {
     }
 
     @RequestMapping(value = "page")
-    fun getUserPage(pageIndex: Int, pageSize: Int): BootstrapPage<User> {
+    fun getUserPage(pageIndex: Int, pageSize: Int): ApiResponse {
         val page = userService.page(pageIndex, pageSize)
-        return BootstrapPage(Integer.parseInt(page.totalElements.toString()), page.toList())
+        val bootstrapPage = BootstrapPage(Integer.parseInt(page.totalElements.toString()), page.toList())
+        return ApiResponse.ok(bootstrapPage)
     }
 
     @RequestMapping(value = "del")
