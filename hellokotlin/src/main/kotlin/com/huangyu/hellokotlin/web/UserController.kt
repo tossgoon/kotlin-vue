@@ -1,10 +1,10 @@
 package com.huangyu.hellokotlin.web
 
 import com.google.gson.GsonBuilder
+import com.huangyu.common.gson.GsonLongTypeAdapter
 import com.huangyu.common.web.ApiResponse
 import com.huangyu.hellokotlin.dao.User
 import com.huangyu.hellokotlin.dao.page.BootstrapPage
-import com.huangyu.hellokotlin.lib.gson.GsonLongTypeAdapter
 import com.huangyu.hellokotlin.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
@@ -20,7 +20,7 @@ class UserController {
     @RequestMapping(value = "add")
     fun addUser(userJson: String): ApiResponse {
         val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).create()
-        var user = gson.fromJson<User>(userJson, User::class.java)
+        var user = gson.fromJson(userJson, User::class.java)
         user = userService.add(user)
         return ApiResponse.ok(user)
     }
