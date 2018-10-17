@@ -34,7 +34,7 @@ export default {
       evt.preventDefault()
       let that = this
       let userJson = JSON.stringify(this.form)
-      this.$HttpPost(this.$api.user.add, { userJson: userJson }, function(obj ) {
+      this.$HttpPost(this.$api.user.add, { userJson: userJson }, function(obj) {
         that.dismissCountDown = 5
       })
     },
