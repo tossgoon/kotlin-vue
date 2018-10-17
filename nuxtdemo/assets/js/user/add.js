@@ -34,13 +34,9 @@ export default {
       evt.preventDefault()
       let that = this
       let userJson = JSON.stringify(this.form)
-      this.$axios
-        .get(this.$api.user.add, {
-          params: { userJson: userJson }
-        })
-        .then(function(res) {
-          that.dismissCountDown = 5
-        })
+      this.$HttpPost(this.$api.user.add, { userJson: userJson }, function(obj ) {
+        that.dismissCountDown = 5
+      })
     },
     onReset(evt) {
       evt.preventDefault()
