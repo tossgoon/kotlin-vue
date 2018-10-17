@@ -52,7 +52,8 @@
           dismissible
           variant="warning"
           @dismissed="dismissCountDown=0"
-          @dismiss-count-down="countDownChanged">
+          @dismiss-count-down="countDownChanged"
+          @close="closeFunc">
           <p>Save successful, page will location to list after {{ dismissCountDown }} seconds...</p>
           <b-progress
             :max="dismissSecs"

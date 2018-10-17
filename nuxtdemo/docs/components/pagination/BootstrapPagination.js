@@ -20,14 +20,12 @@ export default {
     },
     myProvider: async function() {
       this.pageIndex = this.currentPage - 1
-      let res = await this.$axios.get(this.$api.user.page, {
-        params: {
-          pageIndex: this.pageIndex,
-          pageSize: this.pageSize
-        }
+      let data = await this.$httpAwait(this.$api.user.page, {
+        pageIndex: this.pageIndex,
+        pageSize: this.pageSize
       })
-      this.totalRows = res.data.totalRows
-      return res.data.items || []
+      this.totalRows = data.totalRows
+      return data.items || []
     }
   }
 }
