@@ -1,7 +1,7 @@
 {
   "name": "vuedemo",
   "version": "1.0.0",
-  "description": "Vue study project",
+  "description": "A Vue.js project",
   "author": "wangy <szwangyu@yeah.net>",
   "private": true,
   "scripts": {
@@ -68,6 +68,7 @@
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.3.0",
+    "vue-router": "^3.0.1",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
