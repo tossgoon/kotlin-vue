@@ -26,8 +26,7 @@ export default {
   },
   methods: {
     goToIndex: function() {
-      alert('1')
-      this.$router.push('/index')
+      this.$router.push('/user/index')
     }
   }
 }
