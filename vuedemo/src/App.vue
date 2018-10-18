@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <mHeader/>
     <router-view/>
+    <mFooter/>
   </div>
 </template>
 
 <script>
+import mHeader from './layouts/header.vue'
+import mFooter from './layouts/footer.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: { mHeader, mFooter }
 }
 </script>
 
