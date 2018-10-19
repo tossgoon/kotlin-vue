@@ -10,6 +10,8 @@ Vue.use(BootstrapVue)
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './assets/css/docs.min.css'
+import './assets/css/styles.css'
 
 new Vue({
   el: '#app',

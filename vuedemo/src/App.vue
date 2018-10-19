@@ -1,28 +1,66 @@
 <template>
-  <div id="app">
+  <div>
     <mHeader/>
-    <router-view/>
-    <mFooter/>
+    <b-container fluid>
+      <b-row class="flex-xl-nowrap2">
+        <b-col
+          cols="12"
+          md="3"
+          xl="2"
+          class="bd-sidebar">
+          <mSideBar/>
+        </b-col>
+
+        <b-col
+          cols="12"
+          md="9"
+          xl="8"
+          class="pb-md-3 pl-md-5 bd-content">
+          <b-button-group class="my-2 float-right">
+            <b-btn
+              :href="issueURL"
+              size="sm"
+              variant="light"
+              target="_blank">Hard Work
+            </b-btn>
+            <b-btn
+              :href="editPageURL"
+              size="sm"
+              variant="light"
+              target="_blank">Happy Life
+            </b-btn>
+          </b-button-group>
+
+          <router-view/>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
 import mHeader from './layouts/header.vue'
 import mFooter from './layouts/footer.vue'
+import mSideBar from './layouts/sidebar.vue'
 
 export default {
   name: 'App',
-  components: { mHeader, mFooter }
+  components: { mHeader, mFooter, mSideBar },
+  data: function() {
+    return {
+      issueURL: 'http://www.huangyukeji.com',
+      editPageURL: 'http://www.huangyukeji.com'
+    }
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 </style>
