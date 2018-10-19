@@ -10,12 +10,12 @@
           class="bd-sidebar">
           <mSideBar/>
         </b-col>
-
         <b-col
           cols="12"
           md="9"
           xl="8"
           class="pb-md-3 pl-md-5 bd-content">
+          <div class="clearfix">
           <b-button-group class="my-2 float-right">
             <b-btn
               :href="issueURL"
@@ -30,11 +30,12 @@
               target="_blank">Happy Life
             </b-btn>
           </b-button-group>
-
+          </div>
           <router-view/>
         </b-col>
       </b-row>
     </b-container>
+    <!--mFooter/-->
   </div>
 </template>
 
@@ -54,13 +55,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-</style>
