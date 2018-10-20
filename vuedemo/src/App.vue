@@ -16,20 +16,20 @@
           xl="8"
           class="pb-md-3 pl-md-5 bd-content">
           <div class="clearfix">
-          <b-button-group class="my-2 float-right">
-            <b-btn
-              :href="issueURL"
-              size="sm"
-              variant="light"
-              target="_blank">Hard Work
-            </b-btn>
-            <b-btn
-              :href="editPageURL"
-              size="sm"
-              variant="light"
-              target="_blank">Happy Life
-            </b-btn>
-          </b-button-group>
+            <b-button-group class="my-2 float-right">
+              <b-btn
+                :href="issueURL"
+                size="sm"
+                variant="light"
+                target="_blank">Hard Work
+              </b-btn>
+              <b-btn
+                :href="editPageURL"
+                size="sm"
+                variant="light"
+                target="_blank">Happy Life
+              </b-btn>
+            </b-button-group>
           </div>
           <router-view/>
         </b-col>
