@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping(value = "user")
+@RequestMapping("user")
 class UserController {
 
     @Autowired
     lateinit var userService: UserService
 
-    @RequestMapping(value = "add")
+    @RequestMapping("add")
     fun addUser(userJson: String): ApiResponse {
         val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).create()
         var user = gson.fromJson(userJson, User::class.java)
@@ -25,19 +25,19 @@ class UserController {
         return ApiResponse.ok(user)
     }
 
-    @RequestMapping(value = "get")
+    @RequestMapping("get")
     fun getUser(id: Long?): User {
         return userService.get(id)
     }
 
-    @RequestMapping(value = "page")
+    @RequestMapping("page")
     fun getUserPage(pageIndex: Int, pageSize: Int): ApiResponse {
         val page = userService.page(pageIndex, pageSize)
         val bootstrapPage = BootstrapPage(Integer.parseInt(page.totalElements.toString()), page.toList())
         return ApiResponse.ok(bootstrapPage)
     }
 
-    @RequestMapping(value = "del")
+    @RequestMapping("del")
     fun delUser(id: Long?) {
         userService.del(id)
     }
