@@ -11,7 +11,6 @@ class ErrorController {
     // TODO 目前统一处理所有异常了
     @ExceptionHandler(value = Exception::class)
     fun handleException(ex: Exception): ApiResponse {
-        println()
         return ApiResponse.fail(ex.message)
     }
 }
