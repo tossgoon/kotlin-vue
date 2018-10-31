@@ -11,16 +11,20 @@ export default {
       pageIndex: 0,
       pageSize: 10,
       filter: null,
-      detailUrl: '/user/add'
+      detailUrl: '/user/add',
+      deleteUrl: '/user/del'
     }
   },
   methods: {
     showDetail: function(id) {
       this.$router.push({ path: this.detailUrl, query: { id: id } })
     },
+    delete: function(id) {
+      this.$router.push({ path: this.deleteUrl, query: { id: id } })
+    },
     myProvider: async function() {
       this.pageIndex = this.currentPage - 1
-      let data = await this.$httpAwait(this.$api.user.page, {
+      let data = this.$httpAwait(this.$api.user.page, {
         pageIndex: this.pageIndex,
         pageSize: this.pageSize
       })

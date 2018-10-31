@@ -19,6 +19,12 @@
           @click="showDetail(row.item.id)">
           Details
         </b-button>
+        <b-button
+          size="sm"
+          class="mr-2"
+          @click="delete(row.item.id)">
+          Delete
+        </b-button>
       </template>
     </b-table>
     <b-row>

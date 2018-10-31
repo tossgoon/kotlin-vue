@@ -37,7 +37,8 @@ class UserController {
     }
 
     @RequestMapping("del")
-    fun delUser(id: Long?) {
+    fun delUser(id: Long?): ApiResponse {
         userService.del(id)
+        return ApiResponse.ok()
     }
 }

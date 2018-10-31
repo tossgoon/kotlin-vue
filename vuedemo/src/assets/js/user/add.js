@@ -18,9 +18,8 @@ export default {
       this.clear() // TODO
       return
     }
-    this.$httpAwait(this.$api.user.get, {
-      id: getId
-    }).then(user => {
+
+    this.getDetail(getId).then(user => {
       this.form.id = user.id
       this.form.name = user.name
       this.form.age = user.age
@@ -28,6 +27,12 @@ export default {
     })
   },
   methods: {
+    getDetail: async function(getId) {
+      let user = this.$httpAwait(this.$api.user.get, {
+        id: getId
+      })
+      return user
+    },
     onSubmit(evt) {
       evt.preventDefault()
       let that = this
