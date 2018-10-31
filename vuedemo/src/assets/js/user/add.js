@@ -7,10 +7,7 @@ export default {
         name: '',
         age: '',
         phone: '',
-        carList: {
-          name: '',
-          brand: ''
-        }
+        carList: '{}'
       },
       dismissCountDown: 0,
       dismissSecs: 5
@@ -48,6 +45,7 @@ export default {
       this.form.name = ''
       this.form.age = ''
       this.form.phone = ''
+      this.form.carList = ''
       this.show = false
     },
     countDownChanged(dismissCountDown) {
@@ -62,4 +60,3 @@ export default {
     }
   }
 }
-
