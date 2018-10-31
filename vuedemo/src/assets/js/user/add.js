@@ -4,7 +4,7 @@ export default {
     return {
       form: {
         id: '',
-        name: 'dddddddddd',
+        name: '',
         age: '',
         phone: ''
       },
@@ -44,7 +44,7 @@ export default {
     },
     countDownChanged(dismissCountDown) {
       this.dismissCountDown = dismissCountDown
-      this.$router.push({ path: '/user' }) // TODO 添加 alert close 后事件
+      this.$router.push({ path: '/user/index' }) // TODO 添加 alert close 后事件
     },
     test() {
       alert(this.$testGlobalName)
