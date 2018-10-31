@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="531c38ad-f4f9-44d1-93e6-11a932e1fb05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../vuedemo/src/assets/js/user/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vuedemo/src/plugins/pagination/BootstrapPagination.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vuedemo/src/plugins/pagination/BootstrapPagination.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vuedemo/src/plugins/pagination/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuedemo/src/assets/js/user/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/assets/js/user/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuedemo/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuedemo/src/pages/user/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/pages/user/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vuedemo/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -76,13 +68,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="84" />
+          <entry key="kt" value="87" />
           <entry key="txt" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="84" />
+          <entry key="Kotlin" value="87" />
           <entry key="PLAIN_TEXT" value="41" />
         </counts>
       </usages-collector>
@@ -103,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -772,7 +764,7 @@
       <workItem from="1540117327078" duration="7602000" />
       <workItem from="1540172167394" duration="2287000" />
       <workItem from="1540912790922" duration="1260000" />
-      <workItem from="1540948183177" duration="7724000" />
+      <workItem from="1540948183177" duration="10048000" />
     </task>
     <task id="LOCAL-00001" summary="add global error process controller">
       <created>1539829853780</created>
@@ -785,7 +777,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22009000" />
+    <option name="totallyTimeSpent" value="24333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -840,18 +832,6 @@
     <MESSAGE value="add global error process controller" />
     <option name="LAST_COMMIT_MESSAGE" value="add global error process controller" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0103750c-23d6-4535-b262-90eb02bdcd44/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
@@ -883,7 +863,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>

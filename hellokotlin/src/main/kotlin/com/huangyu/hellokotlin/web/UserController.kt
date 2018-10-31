@@ -27,8 +27,7 @@ class UserController {
 
     @RequestMapping("get")
     fun getUser(id: Long?): ApiResponse {
-        val user =  userService.get(id)
-        return ApiResponse.ok(user)
+        return ApiResponse.ok(userService.get(id))
     }
 
     @RequestMapping("page")
