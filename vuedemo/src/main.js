@@ -24,11 +24,13 @@ let directivePlugins = {
 }
 Vue.use(directivePlugins)
 
-import Api from './plugins/api/api.js'
+import Api from './plugins/api/api.js' // customize route
+import BootstrapPagination from './plugins/pagination/index' // pagination plugin
 let main = {
   install(Vue) {
     Vue.prototype.$api = Api
     Vue.prototype.$axios = axios
+    Vue.component(BootstrapPagination.name, BootstrapPagination)
   }
 }
 Vue.use(main)

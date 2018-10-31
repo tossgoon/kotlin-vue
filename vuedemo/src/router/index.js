@@ -15,6 +15,6 @@ export default new Router({
 
     // user
     { path: '/user/index', component: UserIndex },
-    { path: '/user/add', component: UserAdd }
+    { path: '/user/add', component: UserAdd, query: { id: '' } }
   ]
 })

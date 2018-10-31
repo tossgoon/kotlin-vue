@@ -4,31 +4,25 @@ export default {
     return {
       form: {
         id: '',
-        name: '',
+        name: 'dddddddddd',
         age: '',
-        phone: '',
-        carList: '{}'
+        phone: ''
       },
       dismissCountDown: 0,
       dismissSecs: 5
     }
   },
-  async asyncData({ route, app }) {
-    let getId = route.query.id
+  created: function() {
+    let getId = this.$route.query.id
     if (!getId) return
-    let res = await app.$axios.get(app.$api.user.get, {
-      params: { id: getId }
+    this.$httpAwait(this.$api.user.get, {
+      id: getId
+    }).then(user => {
+      this.form.id = user.id
+      this.form.name = user.name
+      this.form.age = user.age
+      this.form.phone = user.phone
     })
-    return {
-      form: {
-        id: res.data.id,
-        name: res.data.name,
-        age: res.data.age,
-        phone: res.data.phone
-      },
-      dismissCountDown: 0,
-      dismissSecs: 5
-    }
   },
   methods: {
     onSubmit(evt) {

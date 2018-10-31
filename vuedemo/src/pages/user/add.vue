@@ -13,7 +13,8 @@
         <b-form-input
           id="txtId"
           v-model="form.id"
-          type="text"/>
+          type="text"
+          v-show:false/>
         <b-form-group
           id="exampleInputGroup1"
           label="Your Name:"
