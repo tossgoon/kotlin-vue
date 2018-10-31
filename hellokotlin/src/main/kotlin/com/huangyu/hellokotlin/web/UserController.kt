@@ -21,8 +21,7 @@ class UserController {
     fun addUser(userJson: String): ApiResponse {
         val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).create()
         var user = gson.fromJson(userJson, User::class.java)
-        user = userService.add(user)
-        return ApiResponse.ok(user)
+        return ApiResponse.ok(userService.add(user))
     }
 
     @RequestMapping("get")
