@@ -14,7 +14,10 @@ export default {
   },
   created: function() {
     let getId = this.$route.query.id
-    if (!getId) return
+    if (!getId) {
+      this.clear() // TODO
+      return
+    }
     this.$httpAwait(this.$api.user.get, {
       id: getId
     }).then(user => {
@@ -35,11 +38,13 @@ export default {
     },
     onReset(evt) {
       evt.preventDefault()
+      this.clear()
+    },
+    clear() {
       this.form.id = ''
       this.form.name = ''
       this.form.age = ''
       this.form.phone = ''
-      this.form.carList = ''
       this.show = false
     },
     countDownChanged(dismissCountDown) {

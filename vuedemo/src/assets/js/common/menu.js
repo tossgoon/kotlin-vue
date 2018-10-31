@@ -5,7 +5,8 @@ let users = [
   },
   {
     slug: '/add',
-    title: 'add'
+    title: 'add',
+    exact: 'user/add'
   }
 ]
 
