@@ -11,20 +11,22 @@ export default {
       pageIndex: 0,
       pageSize: 10,
       filter: null,
-      detailUrl: '/user/add',
-      deleteUrl: '/user/del'
+      detailUrl: '/user/add'
     }
   },
   methods: {
     showDetail: function(id) {
       this.$router.push({ path: this.detailUrl, query: { id: id } })
     },
-    delete: function(id) {
-      this.$router.push({ path: this.deleteUrl, query: { id: id } })
+    deleteUser: function(id) {
+      let that = this
+      this.$HttpPost(this.$api.user.del, { id: id }, function() {
+        that.$refs.userTable.refresh();
+      })
     },
     myProvider: async function() {
       this.pageIndex = this.currentPage - 1
-      let data = this.$httpAwait(this.$api.user.page, {
+      let data = await this.$httpAwait(this.$api.user.page, {
         pageIndex: this.pageIndex,
         pageSize: this.pageSize
       })

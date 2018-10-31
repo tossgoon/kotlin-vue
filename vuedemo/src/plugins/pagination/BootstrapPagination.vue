@@ -4,6 +4,7 @@
   <div>
     <b-table
       id="table_user"
+      ref="userTable"
       :busy.sync="isBusy"
       :items="myProvider"
       :fields="fields"
@@ -22,7 +23,7 @@
         <b-button
           size="sm"
           class="mr-2"
-          @click="delete(row.item.id)">
+          @click="deleteUser(row.item.id)">
           Delete
         </b-button>
       </template>

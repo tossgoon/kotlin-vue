@@ -1,6 +1,8 @@
 package com.huangyu.hellokotlin.service.impl
 
+import com.huangyu.hellokotlin.dao.Car
 import com.huangyu.hellokotlin.dao.User
+import com.huangyu.hellokotlin.dao.repo.CarRepository
 import com.huangyu.hellokotlin.dao.repo.UserRepository
 import com.huangyu.hellokotlin.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
@@ -10,8 +12,8 @@ import org.springframework.stereotype.Service
 
 @Service
 class UserServiceImpl : UserService {
-    @Autowired
-    lateinit var userRepository: UserRepository
+    @Autowired lateinit var userRepository: UserRepository
+    @Autowired lateinit var carRepository: CarRepository
 
     override fun add(user: User): User {
         return userRepository.save(user)
@@ -27,6 +29,9 @@ class UserServiceImpl : UserService {
     }
 
     override fun del(id: Long?) {
+        val user = userRepository.getOne(id)
+        for (car: Car in user.carList!!)
+            carRepository.delete(car)
         userRepository.delete(id)
     }
 }
