@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="531c38ad-f4f9-44d1-93e6-11a932e1fb05" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../vuedemo/src/assets/js/user/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuedemo/src/plugins/pagination/BootstrapPagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuedemo/src/plugins/pagination/BootstrapPagination.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vuedemo/src/plugins/pagination/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuedemo/src/assets/js/user/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/assets/js/user/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuedemo/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuedemo/src/pages/user/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/pages/user/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vuedemo/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vuedemo/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -68,13 +76,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="55" />
+          <entry key="kt" value="84" />
           <entry key="txt" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="55" />
+          <entry key="Kotlin" value="84" />
           <entry key="PLAIN_TEXT" value="41" />
         </counts>
       </usages-collector>
@@ -91,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="278">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -103,17 +111,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.19.RELEASE/2a6480d3e27489725180be236ac7c7aac743a17e/spring-web-4.3.19.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="222" column="13" lean-forward="true" selection-start-line="222" selection-start-column="13" selection-end-line="222" selection-end-column="13" />
+            <state relative-caret-position="195">
+              <caret line="214" selection-start-line="214" selection-end-line="214" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="342">
+              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding>
                 <element signature="e#37#124#0" expanded="true" />
               </folding>
@@ -583,8 +591,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/ErrorController.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt" />
       </list>
     </option>
   </component>
@@ -764,7 +772,7 @@
       <workItem from="1540117327078" duration="7602000" />
       <workItem from="1540172167394" duration="2287000" />
       <workItem from="1540912790922" duration="1260000" />
-      <workItem from="1540948183177" duration="2702000" />
+      <workItem from="1540948183177" duration="7724000" />
     </task>
     <task id="LOCAL-00001" summary="add global error process controller">
       <created>1539829853780</created>
@@ -777,7 +785,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16987000" />
+    <option name="totallyTimeSpent" value="22009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -839,7 +847,7 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt</url>
           <line>21</line>
           <properties />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -855,27 +863,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#37#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.19.RELEASE/2a6480d3e27489725180be236ac7c7aac743a17e/spring-web-4.3.19.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="222" column="13" lean-forward="true" selection-start-line="222" selection-start-column="13" selection-end-line="222" selection-end-column="13" />
+        <state relative-caret-position="195">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/web/UserController.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/huangyu/hellokotlin/dao/UserDtos.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#37#124#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="278">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
         </state>
       </provider>
     </entry>
