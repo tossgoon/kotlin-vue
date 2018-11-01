@@ -22,14 +22,13 @@
           description="User's name and phone is unique">
           <b-form-input
             v-focus
+            v-validate="'required|email'"
             id="txtName"
             v-model="form.name"
-            :state="!$v.form.name.$invalid"
+            name="txtName"
             type="text"
             placeholder="Enter name"/>
-          <b-form-invalid-feedback id="input1LiveFeedback">
-            This is a required field and must be at least 3 characters
-          </b-form-invalid-feedback>
+          <span>{{ errors.first('txtName') }}</span>
         </b-form-group>
         <b-form-group
           id="exampleInputGroup2"
@@ -65,7 +64,6 @@
             height="4px"/>
         </b-alert>
         <b-button
-          :disabled="$v.form.$invalid"
           type="submit"
           variant="primary">Submit
         </b-button>

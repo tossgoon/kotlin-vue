@@ -1,6 +1,3 @@
-import { validationMixin } from 'vuelidate'
-import { required, minLength } from 'vuelidate/lib/validators'
-
 export default {
   layout: 'func',
   data() {
@@ -13,15 +10,6 @@ export default {
       },
       dismissCountDown: 0,
       dismissSecs: 5
-    }
-  },
-  mixins: [validationMixin],
-  validations: {
-    form: {
-      name: {
-        required,
-        minLength: minLength(3)
-      }
     }
   },
   created: function() {
@@ -47,10 +35,18 @@ export default {
     },
     onSubmit(evt) {
       evt.preventDefault()
-      let that = this
-      let userJson = JSON.stringify(this.form)
-      this.$HttpPost(this.$api.user.add, { userJson: userJson }, function() {
-        that.dismissCountDown = 5
+      this.$validator.validateAll().then(result => {
+        if (result) {
+          let that = this
+          let userJson = JSON.stringify(this.form)
+          this.$HttpPost(
+            this.$api.user.add,
+            { userJson: userJson },
+            function() {
+              that.dismissCountDown = 5
+            }
+          )
+        }
       })
     },
     onReset(evt) {
