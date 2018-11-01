@@ -24,9 +24,12 @@
             v-focus
             id="txtName"
             v-model="form.name"
+            :state="!$v.form.name.$invalid"
             type="text"
-            required
             placeholder="Enter name"/>
+          <b-form-invalid-feedback id="input1LiveFeedback">
+            This is a required field and must be at least 3 characters
+          </b-form-invalid-feedback>
         </b-form-group>
         <b-form-group
           id="exampleInputGroup2"
@@ -45,7 +48,6 @@
           <b-form-input
             id="txtPhone"
             v-model="form.phone"
-            required
             placeholder="Enter phone num"/>
         </b-form-group>
         <b-alert
@@ -63,6 +65,7 @@
             height="4px"/>
         </b-alert>
         <b-button
+          :disabled="$v.form.$invalid"
           type="submit"
           variant="primary">Submit
         </b-button>

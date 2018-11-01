@@ -1,3 +1,6 @@
+import { validationMixin } from 'vuelidate'
+import { required, minLength } from 'vuelidate/lib/validators'
+
 export default {
   layout: 'func',
   data() {
@@ -9,7 +12,16 @@ export default {
         phone: ''
       },
       dismissCountDown: 0,
-      dismissSecs: 5,
+      dismissSecs: 5
+    }
+  },
+  mixins: [validationMixin],
+  validations: {
+    form: {
+      name: {
+        required,
+        minLength: minLength(3)
+      }
     }
   },
   created: function() {
