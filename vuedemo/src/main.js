@@ -3,50 +3,25 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
-import BootstrapVue from 'bootstrap-vue'
 
-import './plugins/validate/validator.js'
-
-Vue.config.productionTip = false
-Vue.use(BootstrapVue)
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import './assets/css/docs.min.css'
-import './assets/css/styles.css'
-
-import * as directives from './directives'
-
-let directivePlugins = {
-  install: function(Vue) {
-    for (let plugin in directives) {
-      Vue.use(directives[plugin])
-    }
-  }
-}
-Vue.use(directivePlugins)
+import './directives/index.js' // directives register
+import './plugins/plugins.js' // plugins register
 
 import Api from './plugins/api/api.js' // customize route
-import BootstrapPagination from './plugins/pagination/index' // pagination plugin
+import axios from 'axios'
+
+export default ({ app }, inject) => {
+  app.$api = Api
+  app.$axios = axios
+}
+
 let main = {
   install(Vue) {
     Vue.prototype.$api = Api
     Vue.prototype.$axios = axios
-    Vue.component(BootstrapPagination.name, BootstrapPagination)
   }
 }
 Vue.use(main)
-
-import * as plugins from './plugins/plugins.js'
-
-for (let plugin in plugins) {
-  Vue.use(plugins[plugin])
-}
-
-export default ({ app }, inject) => {
-  app.$api = Api
-}
 
 new Vue({
   el: '#app',

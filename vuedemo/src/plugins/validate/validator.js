@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VeeValidate, { Validator } from 'vee-validate'
 
-Vue.use(VeeValidate)
+//Vue.use(VeeValidate)
+Vue.use(VeeValidate, { fieldsBagName: 'formFields' }) // conflict with the "fields" field
 
 Validator.extend('mobile', {
   getMessage: field => 'The ' + field + ' is not a phone number',
