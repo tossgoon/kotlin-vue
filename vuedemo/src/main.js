@@ -5,11 +5,11 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import BootstrapVue from 'bootstrap-vue'
-import VeeValidate from 'vee-validate'
+
+import './plugins/validate/validator.js'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
-Vue.use(VeeValidate)
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -17,6 +17,7 @@ import './assets/css/docs.min.css'
 import './assets/css/styles.css'
 
 import * as directives from './directives'
+
 let directivePlugins = {
   install: function(Vue) {
     for (let plugin in directives) {
@@ -38,6 +39,7 @@ let main = {
 Vue.use(main)
 
 import * as plugins from './plugins/plugins.js'
+
 for (let plugin in plugins) {
   Vue.use(plugins[plugin])
 }

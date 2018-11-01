@@ -35,19 +35,25 @@
           label="Your Age:"
           label-for="txtAge">
           <b-form-input
+            v-validate="'numeric'"
             id="txtAge"
             v-model="form.age"
+            name="txtAge"
             type="text"
             placeholder="Enter age"/>
+          <span>{{ errors.first('txtAge') }}</span>
         </b-form-group>
         <b-form-group
           id="exampleInputGroup3"
           label="Your Phone Num:"
           label-for="txtPhone">
           <b-form-input
+            v-validate="'mobile'"
             id="txtPhone"
             v-model="form.phone"
+            name="txtPhone"
             placeholder="Enter phone num"/>
+          <span>{{ errors.first('txtPhone') }}</span>
         </b-form-group>
         <b-alert
           :show="dismissCountDown"
