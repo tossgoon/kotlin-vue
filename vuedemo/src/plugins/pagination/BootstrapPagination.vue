@@ -12,18 +12,18 @@
       :current-page="currentPage"
       show-empty>
       <template
-        slot="show"
+        slot="operate"
         slot-scope="row">
         <b-button
           size="sm"
           class="mr-2"
-          @click="showDetail(row.item.id)">
+          @click="detail(row.item.id)">
           Details
         </b-button>
         <b-button
           size="sm"
           class="mr-2"
-          @click="deleteUser(row.item.id)">
+          @click="deleteObj(row.item.id)">
           Delete
         </b-button>
       </template>

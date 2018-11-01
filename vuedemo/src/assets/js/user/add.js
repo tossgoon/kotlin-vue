@@ -9,7 +9,7 @@ export default {
         phone: ''
       },
       dismissCountDown: 0,
-      dismissSecs: 5
+      dismissSecs: 5,
     }
   },
   created: function() {

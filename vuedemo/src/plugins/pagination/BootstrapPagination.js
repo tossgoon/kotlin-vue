@@ -2,31 +2,65 @@ export default {
   name: 'BootstrapPagination',
   data() {
     return {
-      fields: ['id', 'name', 'age', 'phone', 'show'],
       isBusy: false,
-      items: [],
-      currentPage: 1,
-      perPage: 10,
-      totalRows: 0,
-      pageIndex: 0,
-      pageSize: 10,
-      filter: null,
-      detailUrl: '/user/add'
+      totalRows: 0
+    }
+  },
+  props: {
+    fields: {
+      type: Array,
+      default: false
+    },
+    items: {
+      type: String,
+      default: ''
+    },
+    currentPage: {
+      type: Number,
+      default: 1
+    },
+    perPage: {
+      type: Number,
+      default: 10
+    },
+    pageIndex: {
+      type: Number,
+      default: 0
+    },
+    pageSize: {
+      type: Number,
+      default: 10
+    },
+    filter: {
+      type: String,
+      default: ''
+    },
+    detailUrl: {
+      type: String,
+      default: ''
+    },
+    pageUrl: {
+      type: String,
+      default: ''
+    },
+    deleteUrl: {
+      type: String,
+      default: ''
     }
   },
   methods: {
-    showDetail: function(id) {
+    detail: function(id) {
       this.$router.push({ path: this.detailUrl, query: { id: id } })
     },
-    deleteUser: function(id) {
+    deleteObj: function(id) {
       let that = this
-      this.$HttpPost(this.$api.user.del, { id: id }, function() {
-        that.$refs.userTable.refresh();
+      this.$HttpPost(that.deleteUrl, { id: id }, function() {
+        that.$refs.userTable.refresh()
       })
     },
     myProvider: async function() {
       this.pageIndex = this.currentPage - 1
-      let data = await this.$httpAwait(this.$api.user.page, {
+      let data = await this.$httpAwait(this.pageUrl, {
         pageIndex: this.pageIndex,
         pageSize: this.pageSize
       })
