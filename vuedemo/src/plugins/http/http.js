@@ -21,7 +21,7 @@ export default {
     }
 
     Vue.prototype.$HttpPost = function(url, params, callback) {
-      this.$axios.get(url, { params: params }).then(response => {
+      this.$axios.post(url, this.$qs.stringify(params)).then(response => {
         let obj = response.data
         if (obj.code == 2) callback(obj)
         else alert(obj.message)

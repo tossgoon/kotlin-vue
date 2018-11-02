@@ -6,8 +6,11 @@ export default {
         id: '',
         name: '',
         age: '',
-        phone: ''
+        phone: '',
+        carList: ''
       },
+      fields: ['index', 'brand', 'name', 'operate'],
+      items: [],
       dismissCountDown: 0,
       dismissSecs: 5
     }
@@ -34,18 +37,18 @@ export default {
       return user
     },
     onSubmit(evt) {
+      let that = this
       evt.preventDefault()
-      this.$validator.validateAll().then(result => {
-        if (result) {
-          let that = this
-          let userJson = JSON.stringify(this.form)
-          this.$HttpPost(
-            this.$api.user.add,
-            { userJson: userJson },
-            function() {
-              that.dismissCountDown = 5
-            }
-          )
+      this.$validator.validateAll().then(validate => {
+        if (validate) {
+          that.form.carList = that.items
+          let userJson =JSON.stringify(that.form)
+          that.$HttpPost(that.$api.user.add, { userJson: userJson }, function(
+            res
+          ) {
+            console.log(res)
+            that.dismissCountDown = 5
+          })
         }
       })
     },
@@ -64,11 +67,28 @@ export default {
       this.dismissCountDown = dismissCountDown
       this.$router.push({ path: '/user/index' }) // TODO 添加 alert close 后事件
     },
-    test() {
-      alert(this.$testGlobalName)
+    addRow(data) {
+      this.items.push(data)
     },
-    closeFunc() {
-      alert('close 掉了')
+    deleteRow(item) {
+      let index = this.items.indexOf(item)
+      this.items.splice(index, 1)
+    },
+    showModal() {
+      this.$refs.txtBrand.value = ''
+      this.$refs.txtName.value = ''
+      this.$refs.myModalRef.show()
+    },
+    hideModal() {
+      let brand = this.$refs.txtBrand
+      let name = this.$refs.txtName
+      if (!brand.value && !name.value) {
+        alert('please input brand and name')
+        return
+      }
+      let data = { brand: brand.value, name: name.value }
+      this.addRow(data)
+      this.$refs.myModalRef.hide()
     }
   }
 }

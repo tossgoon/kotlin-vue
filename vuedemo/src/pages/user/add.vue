@@ -8,6 +8,7 @@
       class="bd-content"
       role="main">
       <b-form
+        ref="userForm"
         @submit="onSubmit"
         @reset="onReset">
         <b-form-input
@@ -18,8 +19,7 @@
         <b-form-group
           id="exampleInputGroup1"
           label="Your Name:"
-          label-for="txtName"
-          description="User's name and phone is unique">
+          label-for="txtName">
           <b-form-input
             v-focus
             v-validate="'required|email'"
@@ -60,8 +60,7 @@
           dismissible
           variant="warning"
           @dismissed="dismissCountDown=0"
-          @dismiss-count-down="countDownChanged"
-          @close="closeFunc">
+          @dismiss-count-down="countDownChanged">
           <p>Save successful, page will location to list after {{ dismissCountDown }} seconds...</p>
           <b-progress
             :max="dismissSecs"
@@ -69,19 +68,61 @@
             variant="warning"
             height="4px"/>
         </b-alert>
+        Car List:
+        <b-table
+          :fields="fields"
+          :items="items"
+          :bordered="true"
+          :outlined="true"
+          :hover="true">
+          <template
+            slot="index"
+            slot-scope="data">
+            {{ data.index + 1 }}
+          </template>
+          <template
+            slot="operate"
+            slot-scope="row">
+            <b-button
+              size="sm"
+              class="mr-2"
+              @click="deleteRow(row.item)">
+              Delete
+            </b-button>
+          </template>
+        </b-table>
         <b-button
           type="submit"
           variant="primary">Submit
+        </b-button>
+        <b-button @click="showModal">
+          Add Car
         </b-button>
         <b-button
           type="reset"
           variant="danger">Reset
         </b-button>
-        <b-button
-          type="button"
-          variant="danger"
-          @click="test">Test
-        </b-button>
+        <b-modal
+          id="modal1"
+          ref="myModalRef"
+          hide-footer
+          title="Add Car">
+          <p>brand :
+            <input
+              v-focus
+              ref="txtBrand"
+              type="text"></p>
+          <p>name :
+            <input
+              ref="txtName"
+              type="text"></p>
+          <b-btn
+            class="mt-3"
+            variant="primary"
+            block
+            @click="hideModal">Add To List
+          </b-btn>
+        </b-modal>
       </b-form>
     </main>
   </div>
