@@ -9,6 +9,8 @@ import com.huangyu.common.web.ApiResponse
 import com.huangyu.common.web.ReturnCodeEnum
 import com.huangyu.hellokotlin.dao.Car
 import com.huangyu.hellokotlin.dao.User
+import com.huangyu.hellokotlin.dao.repo.UserRepository
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -24,18 +26,28 @@ var userId: Long = 0
 class UserTest {
 
     @Autowired lateinit var testRestTemplate: TestRestTemplate
+    @Autowired lateinit var userRepository: UserRepository
 
-    @Test fun add() {
+    @Before
+    fun clear() {
+        userRepository.deleteAll()
+    }
+
+    @Test fun userTest() {
+        add()
+        get()
+    }
+
+    fun add() {
         var user = User()
-        user.id = 38
         user.age = 35.toString()
-        user.name = "wangyu123"
-        user.phone = "186-8949-1313"
+        user.name = "wangyu"
+        user.phone = "186-8949-5151"
 
         val carList = ArrayList<Car>()
         val car = Car()
-        car.brand = "444444"
-        car.name = "ale5555xa321"
+        car.brand = "mazda"
+        car.name = "alexa"
 
         carList.add(car)
         user.carList = carList
@@ -49,7 +61,7 @@ class UserTest {
         userId = user.id
     }
 
-    @Test fun get() {
+    fun get() {
         val result = Gson().fromJson<ApiResponse>(testRestTemplate.getForObject(TestURL.getUser + "?id=" + userId, String::class.java), ApiResponse::class.java)
         assert(result.code == ReturnCodeEnum.success.ordinal)
         val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).registerTypeAdapter(Date::class.java, GsonDateTypeAdapter()).create()
