@@ -16,12 +16,13 @@ class UserServiceImpl : UserService {
     @Autowired lateinit var carRepository: CarRepository
 
     override fun add(user: User): User {
+        for(car :Car in user.carList!!)
+            car.user = user
         return userRepository.save(user)
     }
 
     override fun get(id: Long?): User {
-        val user = userRepository.getOne(id)
-        return user
+        return userRepository.getOne(id)
     }
 
     override fun page(pageIndex: Int, pageSize: Int): Page<User> {
