@@ -1,6 +1,7 @@
 package com.huangyu.hellokotlin.web
 
 import com.google.gson.GsonBuilder
+import com.huangyu.common.gson.GsonDateTypeAdapter
 import com.huangyu.common.gson.GsonLongTypeAdapter
 import com.huangyu.common.web.ApiResponse
 import com.huangyu.hellokotlin.dao.User
@@ -9,17 +10,18 @@ import com.huangyu.hellokotlin.service.UserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import java.util.*
 
 @RestController
 @RequestMapping("user")
 class UserController {
 
-    @Autowired
-    lateinit var userService: UserService
+    @Autowired lateinit var userService: UserService
 
     @RequestMapping("add")
     fun addUser(userJson: String): ApiResponse {
-        val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).create()
+        val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter())
+                .registerTypeAdapter(Date::class.java, GsonDateTypeAdapter()).create()
         var user = gson.fromJson(userJson, User::class.java)
         return ApiResponse.ok(userService.add(user))
     }

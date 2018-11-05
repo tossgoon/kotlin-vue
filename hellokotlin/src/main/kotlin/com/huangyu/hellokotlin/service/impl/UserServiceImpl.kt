@@ -20,7 +20,8 @@ class UserServiceImpl : UserService {
     }
 
     override fun get(id: Long?): User {
-        return userRepository.getOne(id)
+        val user = userRepository.getOne(id)
+        return user
     }
 
     override fun page(pageIndex: Int, pageSize: Int): Page<User> {

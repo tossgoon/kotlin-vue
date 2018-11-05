@@ -1,6 +1,6 @@
 export default {
   layout: 'func',
-  data() {
+  data () {
     return {
       form: {
         id: '',
@@ -27,6 +27,11 @@ export default {
       this.form.name = user.name
       this.form.age = user.age
       this.form.phone = user.phone
+
+      for (let key in user.carList) {
+        this.addRow(user.carList[key])
+      }
+
     })
   },
   methods: {
@@ -36,13 +41,13 @@ export default {
       })
       return user
     },
-    onSubmit(evt) {
+    onSubmit (evt) {
       let that = this
       evt.preventDefault()
       this.$validator.validateAll().then(validate => {
         if (validate) {
           that.form.carList = that.items
-          let userJson =JSON.stringify(that.form)
+          let userJson = JSON.stringify(that.form)
           that.$HttpPost(that.$api.user.add, { userJson: userJson }, function(
             res
           ) {
@@ -52,34 +57,34 @@ export default {
         }
       })
     },
-    onReset(evt) {
+    onReset (evt) {
       evt.preventDefault()
       this.clear()
     },
-    clear() {
+    clear () {
       this.form.id = ''
       this.form.name = ''
       this.form.age = ''
       this.form.phone = ''
       this.show = false
     },
-    countDownChanged(dismissCountDown) {
+    countDownChanged (dismissCountDown) {
       this.dismissCountDown = dismissCountDown
       this.$router.push({ path: '/user/index' }) // TODO 添加 alert close 后事件
     },
-    addRow(data) {
+    addRow (data) {
       this.items.push(data)
     },
-    deleteRow(item) {
+    deleteRow (item) {
       let index = this.items.indexOf(item)
       this.items.splice(index, 1)
     },
-    showModal() {
+    showModal () {
       this.$refs.txtBrand.value = ''
       this.$refs.txtName.value = ''
       this.$refs.myModalRef.show()
     },
-    hideModal() {
+    hideModal () {
       let brand = this.$refs.txtBrand
       let name = this.$refs.txtName
       if (!brand.value && !name.value) {

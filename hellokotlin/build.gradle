@@ -34,12 +34,6 @@ compileKotlin {
         jvmTarget = "1.8"
     }
 }
-compileTestKotlin {
-    kotlinOptions {
-        freeCompilerArgs = ["-Xjsr305=strict"]
-        jvmTarget = "1.8"
-    }
-}
 
 repositories {
     maven { url 'http://118.190.175.195:8081/nexus/content/repositories/thirdparty' }
@@ -48,7 +42,7 @@ repositories {
 }
 
 dependencies {
-    compile('com.huangyu.common:base:1.1.0')
+    compile('com.huangyu.common:base:1.1.1')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('com.fasterxml.jackson.module:jackson-module-kotlin')
@@ -57,4 +51,5 @@ dependencies {
     runtime('org.springframework.boot:spring-boot-devtools')
     runtime('mysql:mysql-connector-java')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile group: 'org.springframework.security', name: 'spring-security-test', version: '4.0.0.RELEASE'
 }
