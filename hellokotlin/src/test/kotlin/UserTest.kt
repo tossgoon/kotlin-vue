@@ -27,14 +27,15 @@ class UserTest {
 
     @Test fun add() {
         var user = User()
+        user.id = 38
         user.age = 35.toString()
-        user.name = "wangyu"
-        user.phone = "186-8949-5151"
+        user.name = "wangyu123"
+        user.phone = "186-8949-1313"
 
         val carList = ArrayList<Car>()
         val car = Car()
-        car.brand = "mazda"
-        car.name = "alexa"
+        car.brand = "444444"
+        car.name = "ale5555xa321"
 
         carList.add(car)
         user.carList = carList
@@ -56,3 +57,5 @@ class UserTest {
         assert(user.id == userId)
     }
 }
+
+// 22000 + 30000 + 15000 + 10000

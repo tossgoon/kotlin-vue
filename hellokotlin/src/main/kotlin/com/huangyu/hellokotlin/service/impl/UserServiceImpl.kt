@@ -16,7 +16,13 @@ class UserServiceImpl : UserService {
     @Autowired lateinit var carRepository: CarRepository
 
     override fun add(user: User): User {
-        for(car :Car in user.carList!!)
+        if (user.id != 0L) {
+            val existedUser: User = userRepository.findOne(user.id)
+            for (car in existedUser.carList!!)
+                carRepository.delete(car)
+        }
+
+        for (car: Car in user.carList!!)
             car.user = user
         return userRepository.save(user)
     }
