@@ -20,8 +20,7 @@ class UserController {
 
     @RequestMapping("add")
     fun addUser(userJson: String): ApiResponse {
-        val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter())
-                .registerTypeAdapter(Date::class.java, GsonDateTypeAdapter()).create()
+        val gson = GsonBuilder().serializeNulls().registerTypeAdapter(Long::class.java, GsonLongTypeAdapter()).registerTypeAdapter(Date::class.java, GsonDateTypeAdapter()).create()
         var user = gson.fromJson(userJson, User::class.java)
         return ApiResponse.ok(userService.add(user))
     }
